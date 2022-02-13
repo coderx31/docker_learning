@@ -35,6 +35,9 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ``` docker ps ```
 
 ## useful <strong>Docker</strong> commands
+### docker pull
+``` docker pull <image_name> ```
+
 ### docker build
 ``` docker build -t <image_name> . ``` 
 
@@ -42,3 +45,39 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ``` docker run --name <container_name> -d -p <localPort>:<containerPort> <image_name> ```
 <p>-d - detach </p>
 <p>-p - publish </p>
+
+### stop running container
+``` docker stop <container_name> ```
+``` docker stop <container_id> ```
+``` docker kill <container_id> ```
+``` docker kill <container_name> ```
+
+### start docker container
+``` docker start <container_name> ```
+``` docker start <container_id> ```
+
+### restart docker container
+``` docker restart <container_name> ```
+``` docker restart <container_id> ```
+
+### list all docker images
+``` docker images ```
+
+### list all running containers
+``` docker ps ```
+``` docker container ls ```
+
+### list all container (with stopped)
+``` docker ps -a ```
+``` docker container ls --all ```
+
+### docker retag (add new name)
+``` docker tag <currentName>:<newName> ```
+
+### delete stopped docker container
+``` docker rm <container_name> ```
+``` docker rm <container_id> ```
+
+### delete docker image
+``` sudo docker rmi <image_name> ```
+``` sudo docker rmi <image_container> ```
