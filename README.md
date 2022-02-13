@@ -30,6 +30,6 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 <p>To activate these changes, restart computer or create new session for your current user <br></p>
 
 ``` sudo su ${User} ```
-<p> Run the **Docker ps ** command again to ensure that user changes were successfull <br> </p>
+<p> Run the <strong>Docker ps</strong> command again to ensure that user changes were successfull <br> </p>
 
 ``` docker ps ```
