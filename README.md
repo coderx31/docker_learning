@@ -40,5 +40,5 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 
 ### docker run 
 ``` docker run --name <container_name> -d -p <localPort>:<containerPort> <image_name> ```
-<p>-d - detach <br></p>
-<p>-p - publish <br></p>
+<p>-d - detach </p>
+<p>-p - publish </p>
