@@ -33,3 +33,9 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 <p> Run the <strong>Docker ps</strong> command again to ensure that user changes were successfull <br> </p>
 
 ``` docker ps ```
+
+## useful <strong>Docker</strong> commands
+### docker build
+``` docker build -t <image_name> ```
+
+### docker run 
