@@ -24,10 +24,12 @@ learn docker zero to hero
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json: dial unix /var/run/docker.sock: connect: permission denied
 ```
 <p>To resolve this, add current user to the <strong>Docker</strong> group<br></p>
+
 ``` sudo usermod -aG docker ${USER} ```
 
 <p>To activate these changes, restart computer or create new session for your current user <br></p>
 
 ``` sudo su ${User} ```
 <p> Run the **Docker ps ** command again to ensure that user changes were successfull <br> </p>
+
 ``` docker ps ```
