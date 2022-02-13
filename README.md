@@ -1,5 +1,5 @@
 # docker_learning
-<h1 align="center">learn docker zero to hero</h1>
+<h1 align="center">Learn Docker Zero to Hero</h1>
 
 
 ## Preface
