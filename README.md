@@ -47,37 +47,48 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 <p>-p - publish </p>
 
 ### stop running container
-``` docker stop <container_name> ```
-``` docker stop <container_id> ```
-``` docker kill <container_id> ```
-``` docker kill <container_name> ```
+``` docker stop <container_name> ``` <br>
+``` docker stop <container_id> ``` <br>
+``` docker kill <container_id> ``` <br>
+``` docker kill <container_name> ``` <br>
 
 ### start docker container
-``` docker start <container_name> ```
-``` docker start <container_id> ```
+``` docker start <container_name> ``` <br>
+``` docker start <container_id> ``` <br>
 
 ### restart docker container
-``` docker restart <container_name> ```
-``` docker restart <container_id> ```
+``` docker restart <container_name> ``` <br>
+``` docker restart <container_id> ``` <br>
 
 ### list all docker images
-``` docker images ```
+``` docker images ``` <br>
 
 ### list all running containers
-``` docker ps ```
-``` docker container ls ```
+``` docker ps ``` <br>
+``` docker container ls ``` <br>
 
 ### list all container (with stopped)
-``` docker ps -a ```
-``` docker container ls --all ```
+``` docker ps -a ``` <br>
+``` docker container ls --all ``` <br>
 
 ### docker retag (add new name)
 ``` docker tag <currentName>:<newName> ```
 
 ### delete stopped docker container
-``` docker rm <container_name> ```
-``` docker rm <container_id> ```
+``` docker rm <container_name> ``` <br>
+``` docker rm <container_id> ``` <br>
+``` docker container rm <container_id> ``` <br>
+``` docker container rm <container_name> ``` <br>
+<p> delete multiple containers <br> </p>
+``` docker container rm <container_name1> <container_name2> ``` <br>
 
 ### delete docker image
-``` sudo docker rmi <image_name> ```
-``` sudo docker rmi <image_container> ```
+``` sudo docker rmi <image_name> ``` <br>
+``` sudo docker rmi <image_container> ``` <br>
+``` sudo docker image rm <image_name> ``` <br>
+<p> force delete - even if image <strong>IN_USE</strong> by a container <br> </p>
+``` sudo docker image rm <image_name> -f ``` <br>
+
+### delete all containers & images & volumes
+``` docker system prune -a ```
+
