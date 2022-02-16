@@ -79,14 +79,14 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ``` docker rm <container_id> ``` <br>
 ``` docker container rm <container_id> ``` <br>
 ``` docker container rm <container_name> ``` <br>
-<p> delete multiple containers <br> </p>
+    <p> delete multiple containers <br> </p>
 ``` docker container rm <container_name1> <container_name2> ``` <br>
 
 ### delete docker image
 ``` sudo docker rmi <image_name> ``` <br>
 ``` sudo docker rmi <image_container> ``` <br>
 ``` sudo docker image rm <image_name> ``` <br>
-<p> force delete - even if image <strong>IN_USE</strong> by a container <br> </p>
+    <p> force delete - even if image <strong>IN_USE</strong> by a container <br> </p>
 ``` sudo docker image rm <image_name> -f ``` <br>
 
 ### delete all containers & images & volumes
