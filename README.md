@@ -266,3 +266,53 @@ USER coderx
 ```
 
 <br>
+
+<h3> The VOLUME Directive </h3>
+<p> In Docker, the data generated and used by Docker containers will be stored within container filesystem. When  w edelete the cotainer, all the data will be lost. to overcome this issue, Docker came up with the concept of volumes. <strong> Volumes are used to persist the data and share the data between containers</strong></p>
+<p>The <strong>VOLUME</strong> directive generally takes a JSON array</p>
+
+```
+VOLUME ["/path/to/volume"]
+
+# or we can specify a plain string with multiple paths:
+
+VOLUME /path/to/volume1 /path/to/volume2
+```
+
+<p> To check available VOLUME </p>
+
+``` docker container inspect <container> ```
+<br>
+``` docker volume inspect <volume> ```
+
+<h3> The EXPOSE Directive</h3>
+<p> The EXPOSE directivd is used to inform Docker that the container is listening on the specified ports at runtime.</p>
+
+```
+EXPOSE <port>
+
+EXPOSE 4000
+```
+<p>However, the ports exposed with the <strong>EXPOSE</strong> directive will only be accessible from within the other docker containers. To expose these ports outside the Docker container, we can publish the ports with <strong>-p</strong> flag with the <strong>docker run </strong>command</p>
+
+<h3>The HEALTHCHECK Directive</h3>
+<p>Health checks are used in Docker to check whether the containers are running healthily. For example, we can use the health checks to make sure the application is running within the docker container</p>
+
+<p>There can be only one HEALTHCHECK directive in a Dockerfile, If there is more than one, last one will take effect</p>
+
+```
+HEALTHCHECK [OPTIONS] CMD command
+
+HEALTHCHECK CMD curl -f http://localhost:3000/healthcheck || exit 1
+
+HEALTHCHECK --interval=1m --timeout=2s --start-period=2m --retries=3 CMD curl -f http://localhost:3000/healthcheck
+```
+
+<h3>The ONBUILD Directive</h3>
+
+<p> The ONBUILD directie is used in the Dockerfile to create a reusable Docker image that will be used as the base for another Docker image(as parent image). </p>
+
+```
+ONBUILD <instruction>
+
+ONBUILD ENTRYPOINT ["echo", "Running ONBUILD directive"]
