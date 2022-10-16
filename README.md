@@ -79,7 +79,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ``` docker rm <container_id> ``` <br>
 ``` docker container rm <container_id> ``` <br>
 ``` docker container rm <container_name> ``` <br>
-    <p> delete multiple containers <br> </p>
+    <p> delete multiple containers at once <br> </p>
 ``` docker container rm <container_name1> <container_name2> ``` <br>
 
 ### delete docker image
@@ -171,7 +171,7 @@ CMD ["echo", "Hello World"]
 
 
 ### The <strong> ENTRYPOINT </strong> Directive
-<p>Similar to the <strong>CMD</strong> directive, the <strong>ENTRYPOINT</strong> directive is also used to provide this default initialization command that will be executed when a container is created from the Docker image. The difference between the <strong>CMD</strong> directive and the <strong>ENTRYPOINT</strong> directive is that, unlike <strong>CMD</strong> directive, we cannot override the ENTRYPOINT command using the command-line parameters sent with docker container run command</p>
+<p>Similar to the <strong>CMD</strong> directive, the <strong>ENTRYPOINT</strong> directive is also used to pammaarovide this default initialization command that will be executed when a container is created from the Docker image. The difference between the <strong>CMD</strong> directive and the <strong>ENTRYPOINT</strong> directive is that, unlike <strong>CMD</strong> directive, we cannot override the ENTRYPOINT command using the command-line parameters sent with docker container run command</p>
 
 NOTE:
 <p><strong>--entrypoint</strong> flag can be sent with the <strong>docker container run</strong> command to override the default <strong>ENTRYPOINT</strong> of the image</p>
@@ -316,3 +316,5 @@ HEALTHCHECK --interval=1m --timeout=2s --start-period=2m --retries=3 CMD curl -f
 ONBUILD <instruction>
 
 ONBUILD ENTRYPOINT ["echo", "Running ONBUILD directive"]
+
+<h3>Multi Stage Build</h3>
